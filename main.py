@@ -15,7 +15,7 @@ from src.infrastructure.seed_data import seed_database
 from src.presentation.api import router
 
 app = FastAPI(
-    title="ZenithDUS API",
+    title="SelinAşığımDUS API",
     description="🦷 AI-Powered Adaptive DUS Platform",
     version="1.0.0",
 )
@@ -34,7 +34,7 @@ app.include_router(router)
 
 @app.on_event("startup")
 def startup():
-    print("🦷 ZenithDUS başlatılıyor...")
+    print("🦷 SelinAşığım DUS başlatılıyor...")
     create_tables()
     print("✅ Tablolar oluşturuldu.")
     db = SessionLocal()
