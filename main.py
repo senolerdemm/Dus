@@ -23,7 +23,7 @@ app = FastAPI(
 # CORS — React dev server
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -42,9 +42,9 @@ def startup():
         seed_database(db)
     finally:
         db.close()
-    print("🚀 ZenithDUS hazır! → http://localhost:8000/docs")
+    print("🚀 SelinAşığım DUS hazır! → http://localhost:8000/docs")
 
 
 @app.get("/")
 def root():
-    return {"message": "🦷 ZenithDUS API — /docs sayfasını ziyaret edin"}
+    return {"message": "🦷 SelinAşığım DUS API — /docs sayfasını ziyaret edin"}
